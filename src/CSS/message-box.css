@@ -104,21 +104,21 @@ form{
      }
      .text-area{
           width: 90%;
-          height: 180px;
+          height: 150px;
           resize: none;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
           border-bottom-left-radius: 20px;
           border-bottom-right-radius: 20px;
           padding: 30px;
-          font-size: 20px;
+          font-size: 15px;
          
      }
      form{
           position:relative;
      }
      .submit-button{
-          font-size: 30px;
+          font-size: 20px;
           position: absolute;
           bottom: 10%;
           right:12%;
