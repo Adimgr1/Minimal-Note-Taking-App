@@ -27,7 +27,7 @@
 .footer{
      width: 100%;
      height: 25%;
-     background-color: green;
+     background-color: #001F8B;
      display: flex;
      flex-direction: column;
      justify-content: center;
