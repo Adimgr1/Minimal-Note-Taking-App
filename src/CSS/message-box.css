@@ -63,6 +63,10 @@ form{
      color: red;
      transform: translateY(-2px);
 }
+.disabled{
+     pointer-events: none;
+     opacity: 0.5;
+}
 @media (min-width:320px) and (max-width:425px) {
      .message-box {
           width: 100%;

@@ -14,6 +14,7 @@ export default function Message_box(prop) {
   },[])
   let {messageInfo, setMessageInfo}= useContext(My_context)
   let [typed, setTyped] = useState("");
+  let [disabled, setDisabled] = useState(false);
   let [done, setDone] = useState(false);
   let message = "";
   let name = prop.messageInfo.name.split(/[\s_\-$]+/);
@@ -23,6 +24,14 @@ export default function Message_box(prop) {
   } else {
     prof_name = `${name[0][0].toUpperCase()}${name[1][0].toUpperCase()}`;
   }
+  useEffect(()=>{
+    if(typed==""){
+      setDisabled(true)
+    }else{
+      setDisabled(false)
+    }
+    
+  },[typed])
 
   let handleChange = (e) => {
     message = e.target.value;
@@ -114,7 +123,7 @@ export default function Message_box(prop) {
             name=""
             id=""
           ></textarea>
-          <button className="submit-button" type="submit">
+          <button className={disabled?"submit-button disabled":"submit-button"} type="submit">
             <IoSend />
           </button>
         </form>
